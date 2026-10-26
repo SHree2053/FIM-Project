@@ -1,0 +1,4 @@
+#reuirement for this FIM projects
+Flask==3.0.0
+watchdog==4.0.0
+PyYAML==6.0.1

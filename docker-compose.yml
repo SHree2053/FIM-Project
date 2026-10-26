@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  fim-agent:
+    build: .
+    container_name: test_dir
+    # Run interactively so you can use the menu
+    stdin_open: true
+    tty: true
+    # Mount your test_dir so changes are reflected in real-time
+    volumes:
+      - ./test_dir:/app/test_dir
+      # Optional: persist the database
+      - ./fim_events.db:/app/fim_events.db
+    ports:
+      - "5000:5000"   # REST API
+      - "5050:5050"   # Web Dashboard
+    environment:
+      - FIM_API_TOKEN=mysecrettoken123
+    # Override command to start daemon automatically (optional)
+    # command: python fim_daemon.py

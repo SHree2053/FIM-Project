@@ -1,0 +1,55 @@
+#monitor_dir: "/home/abertay/Desktop/FIM/test_dir"
+#baseline_file: "/home/abertay/Desktop/FIM/data/baseline.json"
+
+#api:
+ #host: "0.0.0.0"
+  #port: 5000
+  #ssl: false
+  #token: ""
+#database:
+ # path: "/home/abertay/Desktop/FIM/data/fim_events.db"
+
+#alerts:
+ # syslog: True
+  #email:
+   # enabled: false
+    #smtp_server: "smtp.gmail.com"
+    #smtp_port: 587
+    #username: "your_email@gmail.com"
+    #password: "your_app_password"
+    #from_addr: "your_email@gmail.com"
+    #to_addr: "receiver@example.com"
+    #subject_prefix: "[FIM Alert]"
+
+#diff:
+ # enabled: true
+  #max_size_kb: 1024 
+
+#for docker file
+monitor_dir: "/app/test_dir"
+baseline_file: "/app/data/baseline.json"
+
+api:
+  host: "0.0.0.0"
+  port: 5000
+  ssl: false
+  token: ""
+
+database:
+  path: "/app/data/fim_events.db"
+
+alerts:
+  syslog: false
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: ""
+    password: ""
+    from_addr: ""
+    to_addr: ""
+    subject_prefix: "[FIM Alert]"
+
+diff:
+  enabled: true
+  max_size_kb: 1024
